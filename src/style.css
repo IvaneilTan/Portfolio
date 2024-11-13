@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&family=Ubuntu:wght@400;500&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Ubuntu", sans-serif;
+}
+
+.navbar{
+   position: sticky;
+   left: 0;
+   top: 0;
+   width: 100%;
+   background: #7700ff;
+   padding: 20px;
+}
+
+.navbar_container{
+   display: flex;
+   height: 100%;
+   z-index: 1;
+   max-width: 1440px;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.navbar_logo{
+   color: #fff;
+   margin-right: 0.5rem;
+   font-size: 2rem;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.navbar_menu{
+   display: flex;
+   list-style: none;
+}
+
+.navbar_items{
+   height: 80px;
+}
+
+.navbar_link{
+   text-decoration: none;
+   padding: 0.5rem;
+   height: 100%;
+}
