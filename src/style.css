@@ -97,14 +97,16 @@
 }
 
 .navbar_link{
+   position: relative;
    transition: all 0.2s ease;
    color: #9889aa;
    display: flex;
    align-items: center;
    justify-content: center;
    text-decoration: none;
-   padding: 0 1rem;
    height: 100%;
+   letter-spacing: 1px;
+   margin: 0 1rem;
 }
 
 .navbar_link:hover{
@@ -114,13 +116,18 @@
 
 .navbar_link::after{
    content: '';
-   width: 100px;
-   height: 1px;
+   position: absolute;
+   height: 2px;
+   width: 0%;
    left: 0;
-   bottom: 20px;
+   bottom: 0;
    background-color: #9889aa;
    transition: 0.2s;
-   position: absolute;
+}
+
+.navbar_link:hover::after{
+   color: #ffffff;
+   width: 100%;
 }
 
 @media screen and (max-width: 960px){
