@@ -7,39 +7,21 @@
    font-family: "Ubuntu", sans-serif;
 }
 
-.main{
-   height: 900px;
-   width: 100%;
-   justify-content: center;
-   align-items: center;
-   top: 0;
-}
+/* Navbar section */
 
-.main_container{
-   width: 100%;
-   justify-content: center;
-   align-items: center;
-   top: 0;
-}
-
-.main_background{
-   position: absolute;
-   top: 0;
-   left: 0;
+.navbar_hero{
+   position: relative;
    width: 100%;
    min-height: 100vh;
    background-image: url("images/purple-lines-black-background.png");
    background-position: center;
    background-size: cover;
-   background-repeat: no-repeat;
-   z-index: -1;
+   z-index: -1; 
 }
 
-.main_content{
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
-   top: 0;
+/* not working idk y(to fix later)*/
+.navbar_hero::after{
+   background-image: linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%);
 }
 
 .navbar{
@@ -111,7 +93,7 @@
 
 .navbar_link:hover{
    transition: all 0.2s ease;
-   color: #ffffff;
+   color: #fff;
 }
 
 .navbar_link::after{
@@ -126,7 +108,7 @@
 }
 
 .navbar_link:hover::after{
-   color: #ffffff;
+   color: #fff;
    width: 100%;
 }
 
@@ -173,7 +155,7 @@
       height: 3px;
       margin: 5px auto;
       transition: all 0.2s ease-in-out;
-      background-color: #ffffff;
+      background-color: #fff;
       display: block;
       cursor: pointer;
    }
@@ -202,4 +184,25 @@
    #mobile-menu.is-active .navbar_menuicon:nth-child(3){
       transform: translateX(-8px) rotate(45deg);
    }
+}
+
+/* Hero section */
+.hero{
+   background: transparent;
+   font-size: 1.5rem;
+   position: relative;
+   z-index: 0;
+}
+
+.hero_title{
+   color: #fff;
+   max-width: 1080px;
+   margin: 0 auto;
+   padding: 0 50px;
+   justify-content: center;
+   align-items: center;
+}
+
+.hero_content{
+   color: #fff;
 }
