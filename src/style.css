@@ -1,3 +1,14 @@
+/* rem guide
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem (base)
+18px = 1.125rem
+20px = 1.25rem
+24px = 1.5rem
+30px = 1.875rem
+32px = 2rem
+*/
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&family=Ubuntu:wght@400;500&display=swap');
 
 *{
@@ -5,6 +16,11 @@
    padding: 0;
    box-sizing: border-box;
    font-family: "Ubuntu", sans-serif;
+   color: #fff;
+}
+
+.main_container{
+   width: 100%;
 }
 
 /* Navbar section */
@@ -13,39 +29,36 @@
    position: relative;
    width: 100%;
    min-height: 100vh;
+   min-height: 100svh;
    background-image: url("images/purple-lines-black-background.png");
    background-position: center;
    background-size: cover;
-   z-index: -1; 
-}
-
-/* not working idk y(to fix later)*/
-.navbar_hero::after{
-   background-image: linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%);
 }
 
 .navbar{
-   background: transparent;
-   height: 80px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-size: 1.2rem;
-   position: sticky;
-   top: 0;
-   width: 100%;
-   z-index: 99;
-}
-
-.navbar_container{
    display: flex;
    justify-content: space-between;
-   height: 80px;
-   z-index: 1;
-   width: 100%;
-   max-width: 1440px;
+   background: transparent;
+   position: sticky;
    margin: 0 auto;
-   padding: 0 50px;
+   padding: 16px 32px;
+   font-size: 1.2rem;
+   min-height: 5rem;
+   width: 100%;
+   max-width: 90rem;
+   z-index: 9;
+}
+
+.navbar_menu{
+   display: flex;
+   align-items: center;
+   list-style: none;
+   text-align: center;
+   padding: 0 50;
+}
+
+.navbar_item{
+   height: 2.5rem;
 }
 
 .navbar_logo{
@@ -65,17 +78,6 @@
 
 .fa-gem{
    padding-right: 10px;
-}
-
-.navbar_menu{
-   display: flex;
-   align-items: center;
-   list-style: none;
-   text-align: center;
-}
-
-.navbar_item{
-   height: 40px;
 }
 
 .navbar_link{
@@ -99,7 +101,7 @@
 .navbar_link::after{
    content: '';
    position: absolute;
-   height: 2px;
+   height: 0.125rem;
    width: 0%;
    left: 0;
    bottom: 0;
@@ -113,13 +115,13 @@
 }
 
 @media screen and (max-width: 960px){
-   .navbar_container{
+   .navbar{
       display: flex;
       justify-content: space-between;
-      height: 80px;
+      height: 5rem;
       z-index: 1;
       width: 100%;
-      max-width: 1440px;
+      max-width: 90rem;
       padding: 0;
    }
 
@@ -157,6 +159,9 @@
       transition: all 0.2s ease-in-out;
       background-color: #fff;
       display: block;
+   }
+   
+   .navbar_toggle{
       cursor: pointer;
    }
 
@@ -182,7 +187,7 @@
       transform: translateY(8px) rotate(45deg);
    }
    #mobile-menu.is-active .navbar_menuicon:nth-child(3){
-      transform: translateX(-8px) rotate(45deg);
+      transform: translateY(-8px) rotate(-45deg);
    }
 }
 
@@ -196,11 +201,12 @@
 
 .hero_title{
    color: #fff;
-   max-width: 1080px;
+   max-width: 125rem;
    margin: 0 auto;
-   padding: 0 50px;
+   padding: 0 3.125rem;
    justify-content: center;
    align-items: center;
+   z-index: -1;
 }
 
 .hero_content{
