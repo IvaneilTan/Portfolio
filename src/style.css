@@ -41,8 +41,7 @@
    background: transparent;
    position: sticky;
    margin: 0 auto;
-   padding: 16px 32px;
-   font-size: 1.2rem;
+   font-size: 1.25rem;
    min-height: 5rem;
    width: 100%;
    max-width: 90rem;
@@ -52,13 +51,12 @@
 .navbar_menu{
    display: flex;
    align-items: center;
-   list-style: none;
    text-align: center;
-   padding: 0 50;
+   list-style: none;
 }
 
 .navbar_item{
-   height: 2.5rem;
+   height: 100%;
 }
 
 .navbar_logo{
@@ -72,7 +70,6 @@
    display: flex;
    align-items: center;
    cursor: pointer;
-   text-decoration: none;
    font-size: 2rem;
 }
 
@@ -90,7 +87,7 @@
    text-decoration: none;
    height: 100%;
    letter-spacing: 1px;
-   margin: 0 1rem;
+   padding: 0 1rem;
 }
 
 .navbar_link:hover{
@@ -116,13 +113,8 @@
 
 @media screen and (max-width: 960px){
    .navbar{
-      display: flex;
-      justify-content: space-between;
       height: 5rem;
-      z-index: 1;
-      width: 100%;
-      max-width: 90rem;
-      padding: 0;
+      align-items: center;
    }
 
    .navbar_menu{
@@ -148,17 +140,17 @@
       font-size: 1.5rem;
    }
 
-   .navbar_logo{
-      padding-left: 25px;
-   }
-
    .navbar_menuicon{
       width: 25px;
       height: 3px;
       margin: 5px auto;
       transition: all 0.2s ease-in-out;
-      background-color: #fff;
+      background-color: #9889aa;
       display: block;
+   }
+
+   .navbar_menuicon:hover{
+      background-color: #fff;
    }
    
    .navbar_toggle{
@@ -174,10 +166,7 @@
    }
 
    #mobile-menu{
-      position: absolute;
-      top: 20%;
-      right: 5%;
-      transform: translate(5%, 20%);
+      position: relative;
    }
 
    #mobile-menu.is-active .navbar_menuicon:nth-child(2){
